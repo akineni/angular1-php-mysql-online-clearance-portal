@@ -1,0 +1,75 @@
+<div ng-include="'../views/route_loader.html'"></div>
+
+<!-- DATA TABLE: UNAPPROVED-->
+<section class="p-t-20" ng-hide="isLoading || (students | filter:{clearance_level:user.id}).length == 0">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="title-5 m-b-35">UNAPPROVED</h3>
+                <div class="table-data__tool">
+                    
+                    <div class="table-data__tool-right">
+                        <button class="au-btn au-btn-icon btn-secondary au-btn--small">
+                            <i class="zmdi zmdi-flip"></i>Invert Selection</button>
+                            <button class="au-btn au-btn-icon au-btn--green au-btn--small">
+                            <i class="zmdi zmdi-check-all"></i>Approve Selection</button>
+                    </div>
+                    <div>
+                        <input class="form-control form-control-md" type="text" placeholder="search"
+                            style="width: auto;" ng-model="search.unapproved">
+                    </div>
+                </div>
+                <div class="table-responsive table-responsive-data2">
+                    <table class="table table-data2">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <label class="au-checkbox">
+                                        <input type="checkbox" ng-model="select_all_unapproved" title="Select All">
+                                        <span class="au-checkmark"></span>
+                                    </label>
+                                </th>
+                                <th>S/N {{d}}</th>
+                                <th>Name</th>
+                                <th>Matric number</th>
+                                <th>Email</th>
+                                <th>Level</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="tr-shadow" ng-repeat="student in students | filter:{clearance_level:user.id} | filter: search.unapproved">
+                                <td>
+                                    <label class="au-checkbox">
+                                        <input type="checkbox" ng-checked="select_all_unapproved" ng-model="select">
+                                        <span class="au-checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>{{$index+1}}</td>
+                                <td class="capitalize">{{student.firstname}} {{student.middlename}} {{student.lastname}}</td>
+                                <td>
+                                    <span class="block-email">{{student.matric_no}}</span>
+                                </td>
+                                <td class="desc">{{student.email}}</td>
+                                <td>{{student.level}}</td>
+                                <td>
+                                    <span class="status--process text-danger">unapproved</span>
+                                </td>
+                                <td>
+                                    <div class="table-data-feature">
+                                        <button class="item hover hover-green" data-toggle="tooltip" data-placement="top" title="Approve" 
+                                        ng-click="approval(student.id)" ng-disabled="student.disabled">
+                                            <i class="zmdi zmdi-check"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="spacer"></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END DATA TABLE-->
