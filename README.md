@@ -6,7 +6,7 @@
 
 Online Clearance Portal (OCP) is an implementation of a student (undergraduate) final year clearance where a student has to be cleared in necessary departments from the least up to the highest level in the institution. Clearance status are recorded online at the click of a button (Approve) instead of paper forms to be maintained by school and students.
 
-A student must go through the following department to be finally cleared:
+A student must go through the following department to be finally cleared:    
 1.) Chief Security Officer   
 2.) Hostel Manager   
 3.) University Librarian   
