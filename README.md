@@ -7,14 +7,14 @@
 Online Clearance Portal (OCP) is an implementation of a student (undergraduate) final year clearance where a student has to be cleared in necessary departments from the least up to the highest level in the institution. Clearance status are recorded online at the click of a button (Approve) instead of paper forms to be maintained by school and students.
 
 A student must go through the following department to be finally cleared:
-1.) Chief Security Officer
-2.) Hostel Manager
-3.) University Librarian
-4.) Head of Department
-5.) Dean of College
-6.) Academic Affairs (registry)
-7.) Dean of Student Affairs
-8.) Bursary
+1.) Chief Security Officer   
+2.) Hostel Manager   
+3.) University Librarian   
+4.) Head of Department    
+5.) Dean of College      
+6.) Academic Affairs (registry)    
+7.) Dean of Student Affairs     
+8.) Bursary     
 
 Each department is identified by a unique id (integers: 1-8) and can login with their unique passwords to see approved and unapproved students. Also a smart search-filter functionality is provided to instantly search out students by any detail (name, matric number, level, email...).
 
