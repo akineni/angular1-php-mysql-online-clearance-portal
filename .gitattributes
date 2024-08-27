@@ -1,4 +1,4 @@
-# Specify Angular.js files as JavaScript
+# Specify JavaScript files as JavaScript
 *.js linguist-language=JavaScript
 *.ts linguist-language=TypeScript
 
@@ -11,10 +11,11 @@
 # Specify HTML files as HTML
 *.html linguist-language=HTML
 
-# Specify CSS files as CSS
+# Specify CSS files as CSS, but consider them less significant
 *.css linguist-language=CSS
+*.css linguist-vendored=true
 
-# Exclude test or config files from language statistics (if desired)
+# Exclude specific test or config files from language statistics (if desired)
 # Example:
 # *.test.js linguist-documentation=false
 # *.config.js linguist-documentation=false
